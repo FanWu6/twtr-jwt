@@ -142,8 +142,14 @@ const SignIn = () => {
           refresh: data[0].refresh_token,
         });
 
+        if(data[1] == 401){
+          alert('wrong username or password');
+        }else{
+          history.push("/");
+        }
+
         // back to landing page!
-        history.push("/");
+       
       })
       .catch( (err) => {
         alert(err);
