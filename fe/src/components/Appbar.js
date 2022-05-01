@@ -35,8 +35,9 @@ import PasswordChange from "../pages/PasswordChange/PasswordChange";
 import THome from "../pages/Tweets/Home";
 import Compose from "../pages/Compose/Compose";
 
-const drawerWidth = 240;
+const drawerWidth = 340;
 const history = createBrowserHistory();
+
 
 // css
 const useStyles = makeStyles((theme) => ({
@@ -170,7 +171,7 @@ export default function Dashboard() {
 
       {/* This is the header AppBar */}
       <AppBar position="absolute" className={clsx(classes.appBar, 
-          open && classes.appBarShift, collapsed && classes.appBar)}>
+          open && classes.appBarShift, collapsed && classes.appBar)} color="secondary">
         <Toolbar title={title} className={classes.toolbar}>
 
           {/* The Menu icon exposes the left pane menu bar */}
@@ -197,7 +198,6 @@ export default function Dashboard() {
           </IconButton>
         </Toolbar>
       </AppBar>
-
       {/* The Router component routes URLs to your components */}
       <Router history={history} title={title} >
 
